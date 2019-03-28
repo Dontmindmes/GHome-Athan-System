@@ -67,6 +67,9 @@ Once you have installed SQL and PHP My admin go to domain or ip/phpmyadmin ex. 1
 create a new database, and click import and import athan.sql and make sure to disable
 "Do not use AUTO_INCREMENT for zero values"
 
+Make sure to open the file called "config.php" it is in the "inc" folder
+change the values to your SQL Settings and Database Name
+
 ```sh
 $ sudo chmod 777 config.json
 ```
