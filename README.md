@@ -68,7 +68,7 @@ Password: Shadi1999
 ```
 
 ## Pictures
-![Image of Dashboard] (https://i.gyazo.com/e3d0a6592466a7795fa700ef4e1f4701.png)
+![Image of Login] (https://i.gyazo.com/e3d0a6592466a7795fa700ef4e1f4701.png)
 ![Image of Dashboard] (https://i.gyazo.com/db811c3fd691fb1994755d7092f26ac3.png)
 ![Image of Support] (https://i.gyazo.com/3d9b27ee8795b479dc120df7802a718c.png)
 ![Image of Account Settings] (https://gyazo.com/1816aff649532aa05335c7d4c9261533)
