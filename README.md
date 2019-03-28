@@ -57,6 +57,9 @@ Then Install and Setup Phpmyadmin:
 ```
 https://pimylifeup.com/raspberry-pi-mysql-phpmyadmin/
 ```
+Once you have installed SQL and PHP My admin go to domain or ip/phpmyadmin ex. 127.0.0.1/phpmyadmin
+create a new database, and click import and import athan.sql and make sure to disable
+"Do not use AUTO_INCREMENT for zero values"
 
 ```sh
 $ sudo chmod 777 config.json
