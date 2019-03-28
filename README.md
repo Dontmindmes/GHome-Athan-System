@@ -73,7 +73,20 @@ Password: Shadi1999
 <img src="https://i.imgur.com/fdgIL1k.png">
 <img src="https://i.imgur.com/dWqPwU0.png">
 
+### Features
+* Auto Detects Google Home Devices
+* Customizable Athan Times and Location 
+* Change each salat volume
+* Change Athan Audio
+* 15 Minute Salat warning
+* Secure Login
+* Disable and Enable Diffrent Salats
+* Recites Surah Kahaf after Duhur athan on Fridays
+
 ### Todos
 
  - Unknown, give suggestions
 
+## READ
+DO NOT SELL THIS IN ANY FORM, SERVICE, PRODUCT OR ANYTHING
+DO NOT USE FOR COMMERCIAL USSAGE
