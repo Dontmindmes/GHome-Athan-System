@@ -198,11 +198,13 @@ func main() {
 			}
 		}
 
-		if config.Options.Alert == true {
-			if pds == CurrentTime {
-				cli.SetVolume(config.Volume.Default)
-				cli.Notify(" ")
-				time.Sleep(15 * time.Second)
+		if config.Prayers.Duhur == true {
+			if config.Options.Alert == true {
+				if pds == CurrentTime {
+					cli.SetVolume(config.Volume.Default)
+					cli.Notify(" ")
+					time.Sleep(15 * time.Second)
+				}
 			}
 		}
 
@@ -226,11 +228,13 @@ func main() {
 			}
 		}
 
-		if config.Options.Alert == true {
-			if pas == CurrentTime {
-				cli.SetVolume(config.Volume.Default)
-				cli.Notify(" ")
-				time.Sleep(15 * time.Second)
+		if config.Prayers.Asr == true {
+			if config.Options.Alert == true {
+				if pas == CurrentTime {
+					cli.SetVolume(config.Volume.Default)
+					cli.Notify(" ")
+					time.Sleep(15 * time.Second)
+				}
 			}
 		}
 
@@ -244,11 +248,13 @@ func main() {
 			}
 		}
 
-		if config.Options.Alert == true {
-			if pam == CurrentTime {
-				cli.SetVolume(config.Volume.Default)
-				cli.Notify(" ")
-				time.Sleep(15 * time.Second)
+		if config.Prayers.Magrib == true {
+			if config.Options.Alert == true {
+				if pam == CurrentTime {
+					cli.SetVolume(config.Volume.Default)
+					cli.Notify(" ")
+					time.Sleep(15 * time.Second)
+				}
 			}
 		}
 
@@ -263,11 +269,13 @@ func main() {
 			}
 		}
 
-		if config.Options.Alert == true {
-			if pai == CurrentTime {
-				cli.SetVolume(config.Volume.Default)
-				cli.Notify(" ")
-				time.Sleep(15 * time.Second)
+		if config.Prayers.Isha == true {
+			if config.Options.Alert == true {
+				if pai == CurrentTime {
+					cli.SetVolume(config.Volume.Default)
+					cli.Notify(" ")
+					time.Sleep(15 * time.Second)
+				}
 			}
 		}
 
@@ -291,7 +299,6 @@ func LookupHomeIP() []*GoogleHomeInfo {
 	entriesCh := make(chan *mdns.ServiceEntry, 2)
 	results := []*GoogleHomeInfo{}
 
-	fmt.Println("Make sure your config file matchs Google-Cast-Group IP and Port for Synced BroadCast")
 	go func() {
 		for entry := range entriesCh {
 			if strings.Contains(entry.Name, "Cast") {
@@ -412,6 +419,8 @@ func MethodV() {
 		fmt.Println(Using + " Union Organization islamic de France")
 	case 13:
 		fmt.Println(Using + " Diyanet İşleri Başkanlığı, Turkey")
+	case 14:
+		fmt.Println(Using + " Spiritual Administration of Muslims of Russia")
 	default:
 		fmt.Println("Other option choosen")
 	}
