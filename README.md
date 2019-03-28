@@ -13,7 +13,13 @@ $ go get -u github.com/evalphobia/google-home-client-go
 $ go get -u github.com/gojektech/heimdall
 $ go get -u github.com/micro/mdns
 ```
-
+### Setting up the Google Homes
+1. Open the Google Home App
+2. At the top center click "Add"
+3. Then click "Create Speaker Group"
+4. Select all google homes you wish to play athan
+5. Name the Speaker Group "Group Cast"
+6. Make sure no other speaker group exists, if it does delete it, if you dont, the Athan may not work
 
 ### Setting up the binary
 Setup for the most part is pretty simple given you have some basic knowledge of using linux or have atleasted used a raspberry.
