@@ -135,7 +135,7 @@ func main() {
 
 	if err != nil {
 		defer Check()
-		main() //Recalls Main function if devices are not found
+		main()
 	} else {
 		// Sets to device to default volume
 		Checks()
@@ -152,7 +152,10 @@ func main() {
 
 	for range time.Tick(time.Second * 15) {
 		//Grab Updated Config Files
-		config, _ := LoadConfig("config.json")
+		config, err := LoadConfig("config.json")
+		if err != nil {
+			fmt.Println("Unable to open config.json")
+		}
 
 		//Get Local time test
 		t := time.Now()
@@ -358,7 +361,9 @@ func ACal() Athan {
 func LoadConfig(filename string) (Config, error) {
 	var config Config
 	configFile, err := os.Open(filename)
-
+	if err != nil {
+		fmt.Println("Unable to Load config.json")
+	}
 	defer configFile.Close()
 	if err != nil {
 		return config, err
@@ -371,7 +376,10 @@ func LoadConfig(filename string) (Config, error) {
 
 //ConnectedTo gives information of connected google home and its basic paramaters
 func ConnectedTo() {
-	config, _ := LoadConfig("config.json")
+	config, err := LoadConfig("config.json")
+	if err != nil {
+		fmt.Println("Unable to Load config.json")
+	}
 
 	fmt.Println("Device Connected:", time.Now())
 	fmt.Println("Connected to Device:", config.Settings.Name)
@@ -388,7 +396,10 @@ func ConnectedTo() {
 
 //MethodV Find out what Calculation method is being used
 func MethodV() {
-	config, _ := LoadConfig("config.json")
+	config, err := LoadConfig("config.json")
+	if err != nil {
+		fmt.Println("Unable to Load config.json")
+	}
 
 	var Using string = "Using Calculation Method: "
 
@@ -430,12 +441,12 @@ func Checks() {
 
 	var err = os.Remove("Status.txt")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Unable to remove Status File")
 	}
 
 	file, err := os.Create("Status.txt")
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Unable to write to Status file")
 	}
 	_, err = file.WriteString("ON")
 
@@ -444,11 +455,14 @@ func Checks() {
 
 func Check() {
 
-	file, _ := os.Create("Status.txt")
-
-	s, err := file.WriteString("OFF")
+	file, err := os.Create("Status.txt")
 	if err != nil {
-		fmt.Println(s, err)
+		fmt.Println("Unable to create Status file")
+	}
+
+	_, err = file.WriteString("OFF")
+	if err != nil {
+		fmt.Println("Unable to write to Status file")
 	}
 	defer file.Close()
 }
