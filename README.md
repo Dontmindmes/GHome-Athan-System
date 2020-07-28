@@ -75,8 +75,8 @@ $ sudo chmod 777 config.json
 ```
 then visit the login.php page. and login. Default Login Details are
 ```
-Username: Master
-Password: Shadi1999
+Username: admin
+Password: admin
 ```
 
 ## Pictures
