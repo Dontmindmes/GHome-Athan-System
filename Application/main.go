@@ -135,7 +135,7 @@ func main() {
 
 	if err != nil {
 		defer Check()
-		panic(err)
+		main() //Recalls Main function if devices are not found
 	} else {
 		// Sets to device to default volume
 		Checks()
